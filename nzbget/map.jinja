@@ -1,0 +1,3 @@
+{%- import_yaml "nzbget/defaults.yaml" as defaults -%}
+
+{%- set nzbget = salt['pillar.get']('nzbget:lookup', defaults.nzbget, merge=True) -%}

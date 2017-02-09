@@ -1,0 +1,25 @@
+nzbget:
+  # See `nzbget/defaults.yaml` for more settings that can be overridden
+  lookup:
+    user: nzbd
+
+  # See `nzbget/files/nzbget.conf.jinja` for complete list of configuration
+  # options.
+  config:
+    main_dir: /media/downloads
+    servers:
+      - host: news.example.com
+        port: 119
+        connections: 8
+
+      - host: news.example.org
+        port: 563
+        user: username
+        pass: password
+        level: 1
+        encryption: True
+        connections: 60
+
+    categories:
+      - name: TV
+      - name: Movies

@@ -1,0 +1,16 @@
+{%- from "nzbget/map.jinja" import nzbget with context -%}
+
+[Unit]
+Description=NZBGet Usenet downloader
+
+[Service]
+Type=simple
+User={{ nzbget.user }}
+Group={{ nzbget.user }}
+WorkingDirectory={{ nzbget.data_dir }}
+ExecStart={{ nzbget.bin }} --daemon --configfile {{ nzbget.config_file }}
+ExecStop={{ nzbget.bin }} --quit --configfile {{ nzbget.config_file }}
+
+[Install]
+WantedBy=multi-user.target
+
