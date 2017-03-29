@@ -23,3 +23,8 @@ nzbget:
     categories:
       - name: TV
       - name: Movies
+
+  # List of scripts to install. See `nzbget/files/scripts/` for available
+  # scripts.
+  scripts:
+    - permissions.sh
