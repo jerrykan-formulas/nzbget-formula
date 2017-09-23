@@ -10,8 +10,7 @@ nzbget:
   config_file: /etc/nzbget/nzbget.conf
 
   data_dir: /var/lib/nzbget
+  lock_file: /var/lib/nzbget/nzbget.pid
 
   log_dir: /var/log/nzbget
   log_file: /var/log/nzbget/nzbget.log
-
-  lock_file: /var/run/nzbget.pid
