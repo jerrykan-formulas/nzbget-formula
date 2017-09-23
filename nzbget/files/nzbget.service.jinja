@@ -1,12 +1,15 @@
 {%- from "nzbget/map.jinja" import nzbget with context -%}
 
+{%- set config = salt['pillar.get']('nzbget:config', {}) -%}
+
 [Unit]
 Description=NZBGet Usenet downloader
 
 [Service]
-Type=simple
+Type=forking
 User={{ nzbget.user }}
 Group={{ nzbget.user }}
+PIDFile={{ config.get('lock_file', nzbget.lock_file) }}
 WorkingDirectory={{ nzbget.data_dir }}
 ExecStart={{ nzbget.bin }} --daemon --configfile {{ nzbget.config_file }}
 ExecStop={{ nzbget.bin }} --quit --configfile {{ nzbget.config_file }}
