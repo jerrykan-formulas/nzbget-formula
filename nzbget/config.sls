@@ -1,8 +1,8 @@
 {%- from "nzbget/map.jinja" import nzbget with context -%}
 
-{%- set main_dir = salt['pillar.get']('nzbget:config:main_dir',
+{%- set main_dir = salt['pillar.get']('nzbget:config:MainDir',
                                       nzbget.data_dir) -%}
-{%- set scripts_dir = salt['pillar.get']('nzbget:config:script_dir',
+{%- set scripts_dir = salt['pillar.get']('nzbget:config:ScriptDir',
                                          main_dir ~ '/scripts') -%}
 {%- set scripts = salt['pillar.get']('nzbget:scripts', []) -%}
 

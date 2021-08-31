@@ -6,23 +6,23 @@ nzbget:
   # See `nzbget/files/nzbget.conf.jinja` for complete list of configuration
   # options.
   config:
-    main_dir: /media/downloads
-    servers:
-      - host: news.example.com
-        port: 119
-        connections: 8
+    MainDir: /media/downloads
+    Servers:
+      - Host: news.example.com
+        Port: 119
+        Connections: 8
 
       - host: news.example.org
-        port: 563
-        user: username
-        pass: password
-        level: 1
-        encryption: True
-        connections: 60
+        Port: 563
+        Username: username
+        Password: password
+        Level: 1
+        Encryption: True
+        Connections: 60
 
-    categories:
-      - name: TV
-      - name: Movies
+    Categories:
+      - Name: TV
+      - Name: Movies
 
   # List of scripts to install. See `nzbget/files/scripts/` for available
   # scripts.
