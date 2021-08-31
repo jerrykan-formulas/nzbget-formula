@@ -32,6 +32,8 @@ nzbget-service-file:
     - name: /etc/systemd/system/{{ nzbget.service }}.service
     - source: salt://nzbget/files/nzbget.service.jinja
     - template: jinja
+    - context:
+        nzbget_bin: {{ nzbget.bin }}/nzbget
 
 nzbget-service:
   service.running:

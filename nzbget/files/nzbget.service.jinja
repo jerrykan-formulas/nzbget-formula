@@ -11,9 +11,8 @@ User={{ nzbget.user }}
 Group={{ nzbget.user }}
 PIDFile={{ config.get('lock_file', nzbget.lock_file) }}
 WorkingDirectory={{ nzbget.data_dir }}
-ExecStart={{ nzbget.bin }} --daemon --configfile {{ nzbget.config_file }}
-ExecStop={{ nzbget.bin }} --quit --configfile {{ nzbget.config_file }}
+ExecStart={{ nzbget_bin }} --daemon --configfile {{ nzbget.config_file }}
+ExecStop={{ nzbget_bin }} --quit --configfile {{ nzbget.config_file }}
 
 [Install]
 WantedBy=multi-user.target
-
