@@ -1,7 +1,6 @@
 {%- from "nzbget/map.jinja" import nzbget with context -%}
 
 include:
-  - nzbget
   - nzbget.config
 
 nzbget-user:

@@ -6,9 +6,6 @@
                                          main_dir ~ '/scripts') -%}
 {%- set scripts = salt['pillar.get']('nzbget:scripts', []) -%}
 
-include:
-  - nzbget
-
 nzbget-config-dir:
   file.directory:
     - name: {{ nzbget.config_dir }}
