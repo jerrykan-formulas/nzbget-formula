@@ -3,7 +3,7 @@
 {%- set main_dir = salt['pillar.get']('nzbget:config:MainDir',
                                       nzbget.data_dir) -%}
 {%- set scripts_dir = salt['pillar.get']('nzbget:config:ScriptDir',
-                                         main_dir ~ '/scripts') -%}
+                                         nzbget.install_dir ~ '/scripts') -%}
 {%- set scripts = salt['pillar.get']('nzbget:scripts', []) -%}
 
 nzbget-config-dir:
